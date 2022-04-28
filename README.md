@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+#FrontEnd del Test ControlCliente
+
+#Esta hecho En Angular V13.3.3
+
+#Para correrlo asegurate que tenga Node Js intalado en tu maquina Minima V12
+
+#Tambien se necesita Angular cli instalado 
+
+#npm install -g @angular/cli@13.3.3 para instalar angular 13.3.3
+#npm update para actualizar los paquetes
+#ng serve para correr la applicacion
+
+
