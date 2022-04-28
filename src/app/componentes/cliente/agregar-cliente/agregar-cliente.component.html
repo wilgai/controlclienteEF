@@ -1,0 +1,112 @@
+<div class="container">
+    <!--Card list-->
+    <div class="content contact-list">
+        <form [formGroup]="formCliente"  (ngSubmit)="onSubmit(formCliente.value)">
+            <div class="card card-default">
+         
+                <div class="card-header ">
+                    <h2>Agregar Cliente</h2>
+                    <button  type="submit" class="btn btn-primary" [disabled]="formCliente.invalid" >Guardar Cliente</button>
+                </div>
+                <div class="card-body p-md-5 text-black">
+                    
+                   
+                        <div class="row mb-2">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="firstName">Nombre Completo</label>
+                                    <input type="text" formControlName="nombre"   class="form-control" />
+                                    <div style="color:red;" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                                       Este Campo es Obligatorio
+                                       </div>
+                                </div>
+                            </div>
+            
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="lastName">Identificación</label>
+                                    <input type="text" formControlName="identificacion"  class="form-control"  />
+                                    <div style="color:red;" *ngIf="identificacion.invalid && (identificacion.dirty || identificacion.touched)">
+                                       Digite su identificación
+                                        </div>
+                                </div>
+                            </div>
+            
+                            <div class="col-lg-6">
+                                <div class="form-group mb-4">
+                                    <label for="userName">Correo</label>
+                                    <input type="text" formControlName="correo"  class="form-control"  />
+                                    <div style="color:red;" *ngIf="correo.invalid">
+                                        Digite un correo válido
+                                         </div>
+                                </div>
+                            </div>
+            
+                            <div class="col-lg-6">
+                                <div class="form-group mb-4">
+                                    <label for="email">Celular</label>
+                                    <input [(ngModel)]="cel" maxlength="14" (keyup)="maskCelular($event)" type="tel" formControlName="celular"  class="form-control" />
+                                    <div style="color:red;" *ngIf="celular.invalid && (celular.dirty || celular.touched)">
+                                        Digite un Número de celular.
+                                         </div>
+                                </div>
+                            </div>
+            
+                            <div class="col-lg-6">
+                                <div class="form-group mb-4">
+                                    <label for="Birthday">Teléfono</label>
+                                    <input [(ngModel)]="tel" maxlength="14" (keyup)="maskTelefono($event)" type="tel" formControlName="telefono"  class="form-control" />
+                                </div>
+                            </div>
+            
+                            <div class="col-lg-6">
+                                <div class="form-group mb-4">
+                                    <label for="event">Sexo</label>
+                                     <select class="form-control" formControlName="sexo"  >
+                                        <option value="">--Select--</option>
+                                        <option value="Hombre" >Hombre</option>
+                                        <option value="Mujer" >Mujer</option>
+                                        <option value="Otro" >Otro</option>
+                                     </select>
+                                     <div style="color:red;" *ngIf="sexo.invalid && (sexo.dirty || sexo.touched)">
+                                        Elige un genero.
+                                         </div>
+                                </div>
+                            </div>
+                          
+                        </div>
+            
+                        <div class="col-sm-8 col-lg-12">
+                            <label for="coverImage" >Imagen</label>
+                            <div class="custom-file mb-1">
+                                <input type="text" [disabled] = 'true' [(ngModel)]="url" ng-disabled formControlName="imagen" value="Hola" class="form-control"  />
+                                
+  
+                            </div>
+                        </div>
+                   
+           
+                <!--------------------------------------------Address---------------------------------------------->
+                <div class="col-lg-6">
+                    <a  class="btn btn-sm btn-success text-white" (click)="agregarDireccion()" ><i class="fa fa-plus"></i>Agregar Direccion</a>
+                </div>
+                <div *ngFor="let ship of ships; let i = index">
+                    <ship [data]="ship" [index]="i" (remove)="eliminarDireccion($event)"></ship>
+                  </div>  
+                  <br>
+                  <div class="col-lg-6">
+                    <a  class="btn btn-sm btn-success text-white" (click)="agregarConocimiento()" ><i class="fa fa-plus"></i>Agregar Conocimiento</a>
+                </div>
+                  <div *ngFor="let conocimiento of conocimientos; let i = index">
+                    <conocimiento [data]="conocimiento" [index]="i" (remove)="eliminarConocimento($event)"></conocimiento>
+                  </div> 
+                </div>
+            </div>
+    
+        </form>
+    </div>
+</div>
+
+
+
+

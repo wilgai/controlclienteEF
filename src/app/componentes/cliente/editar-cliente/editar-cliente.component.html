@@ -1,0 +1,325 @@
+<div class="container">
+    <div class="main-body">
+    
+          <!-- Breadcrumb -->
+       
+          <!-- /Breadcrumb -->
+    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="{{data.clientes[0].imagen}}" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <h4>{{data.clientes[0].nombre}}</h4>
+                      <p class="text-secondary mb-1"> {{data.conocimientos[0].conocimiento}}</p>
+                      <p class="text-muted font-size-sm">{{data.direcciones[0].pais}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-3">
+               
+               
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Conocimiento de Desarrollo</h6>
+                       
+                       <div *ngFor="let con of data.conocimientos"  >
+                        <div class="row align-items-center">
+                            <div class="col-md-8 mb-3 mb-sm-0">
+                                <h6>
+                                <a href="#" class="text-primary">{{con.conocimiento}}</a>
+                                </h6>
+  
+                            </div>
+                           
+                            <div class="col-md-4 op-7">
+                                <div class="row text-center op-7">
+                                    <div  class="col px-1 btn "  ><i class="fa fa-pencil"></i></div>
+                                    <div  class=" col px-1 "  ><i class="fa fa-trash"></i></div>
+         
+                                </div>
+                            </div>
+                            
+                            </div>
+                      
+                            <div class="progress mb-3" style="height: 5px">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width:66% " aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                            </div>
+                          
+                                    <div class="col-lg-6">
+                                        <a  class="btn btn-sm btn-primary text-white" data-toggle="modal" data-target="#conocimiento" ><i class="fa fa-plus"></i></a>
+                                    </div>
+                      </div>
+                      
+                    </div>
+                  
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Nombre Completo</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     {{data.clientes[0].nombre}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Sexo</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{data.clientes[0].sexo}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Identificación</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{data.clientes[0].identificacion}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Correo</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{data.clientes[0].correo}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Télefono</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{data.clientes[0].telefono}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Celular</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{data.clientes[0].celular}}
+                    </div>
+                  </div>
+                  <hr>
+                
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            
+         <!---->
+         <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="d-flex align-items-center mb-3">Direcciones</h5>
+                            <!-- End of post 7 -->
+                            <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+                            <div *ngFor="let direcion of data.direcciones">
+                                <div class="row align-items-center">
+                                <div class="col-md-8 mb-3 mb-sm-0">
+                                    <h5>
+                                    <a href="#" class="text-primary">{{direcion.pais}}- {{direcion.provicia}} </a>
+                                    </h5>
+                                    <p class="text-sm"><a class="text-black" href="#">{{direcion.lineaDeDireccion1}} <br>{{direcion.municipio}}</a></p>
+                                   
+                                </div>
+                                <div class="col-md-4 op-7">
+                                    <div class="row text-center op-7">
+                                    <div  class=" col px-1 "  ><i class="fa fa-pencil"></i></div>
+                                    <div  class=" col px-1 "  ><i class="fa fa-trash"></i></div>
+                                    
+                                    </div>
+                                </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <!-- /End of post 7 -->
+                            <div class="col-lg-6">
+                                <a  class="btn btn-sm btn-info text-white" data-toggle="modal" data-target="#direccion" ><i class="fa fa-plus"></i></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+    
+        <!-- Editar direccion  -->
+        <div class="modal fade" id="direccion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header px-4">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Dirección</h5>
+                        </div>
+                        <div class="modal-body px-4">
+                            <form *ngIf="form" [formGroup]="form"  (ngSubmit)="onSubmitDireccion(form.value)">
+                                <div class="container ">
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                      <div class="col">
+                                        <div class="card my-4 shadow-3">
+                                          <div class="row g-0">
+                                           
+                                            <div class="col-xl-12">
+                                              <div class="card-body p-md-5 text-black">
+                                                <h4 class="mb-4 text-uppercase">Dirección</h4>
+                                                <div class="form-outline mb-4">
+                                                    <input type="hidden" [(ngModel)]="nombre" formControlName="provicia"   />
+                                                    <input type="hidden" [(ngModel)]="id" formControlName="codigoCliente"   />
+                                                  <input type="text" formControlName="lineaDeDireccion1" class="form-control form-control-lg" placeholder="Línea de Dirección 1" />
+                                                  <div style="color:red;" *ngIf="lineaDeDireccion1?.invalid && (lineaDeDireccion1?.dirty || lineaDeDireccion1?.touched)">
+                                                                    Introduce la una dirección.
+                                                                     </div>
+                                                </div>
+                                                <div class="form-outline mb-4">
+                                                   
+                                                    <input type="text" formControlName="lineaDeDireccion2" class="form-control form-control-lg" placeholder="Línea de Dirección 2 Opcional" />
+                                                    
+                                                  </div>
+                                                <div class="row">
+                                                  <div class="col-md-6 mb-4">
+                                                  <label for="Pais">Pais</label>
+                                                    <select class="form-control"  formControlName="pais">
+                                                    <option value="">Elige el Pais</option>
+                                                      
+                                                      <option value="República Dominicana">República Dominicana </option>
+                                                      
+                                                    </select>
+                                                    <div style="color:red;" *ngIf="pais?.invalid && (pais?.dirty || pais?.touched)">
+                                                                    Elige el pais
+                                                                     </div>
+                                                  </div>
+                                                  <div class="col-md-6 mb-4">
+                                                  <label for="Provincia">Provincia</label>
+                                                    <select  (change)="onSelectProvincia($event)" onchange="obtenerNombre($event)"  class="form-control" formControlName="prov">
+                                                      <option value="">Elige la Provincia</option>
+                                                     <option [value]="provincia.codigo+'|'+ provincia.nombre" *ngFor="let provincia of provincias">
+                                                       {{provincia.nombre}}
+                            
+                                                      </option>
+                                                      
+                                                    </select>
+                                                    <div style="color:red;" *ngIf="prov?.invalid && (prov?.dirty || prov?.touched)">
+                                                                    Elige el pais
+                                                                     </div>
+                                                  </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-4">
+                                                    <label for="municipio">Municipio</label>
+                                                      <select class="form-control" formControlName="municipio">
+                                                        <option value="">Elige El Municipio</option>
+                                                        <option [value]="municipio.nombre" *ngFor="let municipio of municipios">
+                                                        {{municipio.nombre}}
+                            
+                                                        </option>
+                                                       
+                                                      </select>
+                                                      <div style="color:red;" *ngIf="municipio?.invalid && (municipio?.dirty || municipio?.touched)">
+                                                                    Elige el municipio
+                                                                     </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-4">
+                                                    <label for="Municipio">Código postal</label>
+                                                        
+                                                        <input type="text" formControlName="codigoPostal" maxlength="5" class="form-control form-control-lg" placeholder="Código postal" />
+                                                        <div style="color:red;" *ngIf="codigoPostal?.invalid && (codigoPostal?.dirty || codigoPostal?.touched)">
+                                                                   Digite el código postal
+                                                                     </div>
+                                                    </div>
+                                                  </div>
+                                              
+                                  
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer px-4">
+                                    <button type="button" id="cerrar-modal" class="btn btn-smoke btn-pill"  data-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary btn-pill" [disabled]="form.invalid">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                      
+                    </form>
+                </div>
+            </div>
+        </div>
+
+         
+        <!-- Editar direccion  -->
+        <div class="modal fade" id="conocimiento" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <form *ngIf="formConocimiento" [formGroup]="formConocimiento"  (ngSubmit)="onSubmitConocimiento(formConocimiento.value)">
+                        <div class="modal-header px-4">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Conocimiento</h5>
+                        </div>
+                        <div class="modal-body px-4">
+                           
+                                <div class="container ">
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                      <div class="col">
+                                        <div class="card my-4 shadow-3">
+                                          <div class="row g-0">
+                                           
+                                            <div class="col-xl-12">
+                                              <div class="card-body p-md-5 text-black">
+                                                <h4 class="mb-4 text-uppercase">Conocimiento de Desarrollo</h4>
+                                                <div class="form-outline mb-4">
+                                                    <input type="hidden" [(ngModel)]="id" formControlName="codigoCliente"   />
+                                                  <input type="text" formControlName="conocimiento" class="form-control form-control-lg" placeholder="Conocimiento" />
+                                                  <div style="color:red;" *ngIf="conocimiento?.invalid && (conocimiento?.dirty || conocimiento?.touched)">
+                                                                   Digite un conocimiento
+                                                                     </div>
+                                                </div>
+                                               
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer px-4">
+                                        <button type="button" id="cerrar-modal" class="btn btn-smoke btn-pill" data-dismiss="modal">Cancelar</button>
+                                        <button type="submit" class="btn btn-primary btn-pill" [disabled]="formConocimiento.invalid">Guardar</button>
+                                    </div>
+                            
+                        </div>
+                     
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
